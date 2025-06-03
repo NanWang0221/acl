@@ -15,8 +15,7 @@ library(wesanderson)
 library(dmetar)
 
 
-dfo <- read.csv("data.csv") %>%
-  filter(!(org_order %in% c(119:136))) 
+dfo <- read.csv("data_git.csv") %>%
 df = dfo
 df <- data.frame(scale(df[names(df) %in% c('source', 'presentation',  'NRecorder', 'context_variability_re', 'n_rep', 'modality_re', 'learn_mode', 'feedback_re2_ana', 'explicitness_instruction',   'training_duration', 'trial_number', 'consolidation', 'es' )]))
 df <- df %>% rename(modality = modality_re)
